@@ -13,11 +13,11 @@ class OrderMapper {
 
     fun mapOrder() = RowMapper<Order> { it: ResultSet, _: Int ->
         Order(
-            it.getObject("id", UUID::class.java),
+            Order.OrderId(it.getObject("id", UUID::class.java)),
             it.getObject("merchant_id", UUID::class.java),
             listOf(),
-            it.getDouble("total"),
-            it.getObject("state", OrderStatus::class.java)
+            it.getBigDecimal("total"),
+            OrderStatus.valueOf(it.getString("state"))
         )
     }
 }

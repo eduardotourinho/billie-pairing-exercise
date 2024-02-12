@@ -4,5 +4,5 @@ import io.billie.orders.app.domain.entities.Shipment
 
 interface ShipmentNotifierPort {
 
-    fun notifyShipment(shipment: Shipment)
+    fun notifyShipment(shipment: Shipment): Shipment.ShipmentId
 }

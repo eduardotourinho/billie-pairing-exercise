@@ -5,7 +5,7 @@ import java.util.UUID
 
 interface OrderRepository {
 
-    fun createOrder(order: Order)
+    fun createOrder(order: Order): Order
 
-    fun findByMerchantAndId(merchantId: UUID, orderId: UUID): Order
+    fun findByMerchantAndId(merchantId: UUID, orderId: Order.OrderId): Order
 }

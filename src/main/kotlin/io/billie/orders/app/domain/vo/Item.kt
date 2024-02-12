@@ -8,6 +8,16 @@ data class Item(
     val price: Double = 0.0
 ) {
 
+    override fun equals(other: Any?): Boolean {
+        if (other !is Item) return false
+
+        return id == other.id
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
+
     companion object Factory {
 
         fun create(id: UUID): Item {
