@@ -4,9 +4,6 @@ Pair Programming Exercise for Billie
 This holds the implementation of the [Billie's pair-programming](docs/README.md) exercise.
 Although the main use-case was to implement the `Notify shipment`, the `Create Order` use-case was implemented as support to the main use-case.
 
-### Disclaimer
-
-This is my first project written in Kotlin. I'm not 100% sure of Kotlin best practices and mostly followed Java practices. So please, let me know if anything is better done in a different way in Kotlin.
 
 ## Code Architecture
 
